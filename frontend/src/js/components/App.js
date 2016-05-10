@@ -17,7 +17,7 @@ export default class App extends React.Component {
           fluid
         />
         <div className='header-spacing'></div>
-          {this.props.children}
+        {this.props.children}
         <Footer logoUrl={options.logoUrl} />
       </div>
     )
