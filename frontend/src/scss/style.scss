@@ -1,5 +1,6 @@
 @import 'variables';
-@import 'bootstrap-navbar';
+@import 'navbar';
+@import 'questions';
 
 html {
   position: relative;
@@ -8,7 +9,6 @@ html {
 
 body {
   font-family: $main-font;
-  margin-bottom: $footer-height;
 }
 
 .about h3 {
@@ -28,4 +28,8 @@ body {
   img {
     width: 100%;
   }
+}
+
+main {
+  margin: 0 1em;
 }

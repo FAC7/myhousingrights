@@ -1,0 +1,13 @@
+@import 'variables';
+
+.header-spacing {
+  height: $header-height;
+}
+
+nav,footer {
+  background-color: $primary-orange !important;
+}
+
+.footer-copyright {
+  background-color: $primary-orange !important;
+}

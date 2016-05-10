@@ -8,7 +8,7 @@ export default class Home extends React.Component {
         <Row>
           <Col xs={12}>
             <div className='image-container'>
-              <img src='img/rhino.png' />
+              {/*<img src='img/rhino.png' />*/}
             </div>
             <p>Your app goes here...</p>
           </Col>
