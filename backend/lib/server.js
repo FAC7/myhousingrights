@@ -29,7 +29,7 @@ module.exports = (client) => {
 
   const server = new Hapi.Server()
 
-  server.connection(ConnectionSettings)
+  server.connection({port})
   server.register(Plugins, handlePlugins)
   server.route(Routes)
 
