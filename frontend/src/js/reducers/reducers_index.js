@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import generic from './reducer_generic.js'
+import homeless from './reducer_homeless.js'
 
 const rootReducer = combineReducers({
-  generic
+  homeless
 })
 
 export default rootReducer
