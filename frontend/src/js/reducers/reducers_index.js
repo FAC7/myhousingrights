@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import generic from './reducer_generic.js'
+import files from './reducer_addFile.js'
 
 const rootReducer = combineReducers({
-  generic
+  files
 })
 
 export default rootReducer

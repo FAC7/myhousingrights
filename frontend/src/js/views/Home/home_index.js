@@ -1,62 +1,42 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { getUserDetails } from '../../actions/actions_index.js'
-var Dropzone = require('react-dropzone');
+import { addEvidence } from '../../actions/addEvidence.js'
+var Dropzone = require('react-dropzone')
 
-export default class Home extends React.Component {
 
-  constructor () {
-    super()
-    this.state = {
-      data_uri: null
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleFile = this.handleFile.bind(this)
-    this.onDrop = this.onDrop.bind(this)
-  }
+class Home extends React.Component {
 
-  onDrop (files) {
-    console.log('Received files: ', files, files[0].preview)
-    this.setState({
-      data_uri: files[0].preview
-    })
-  }
-
-  handleSubmit (e) {
-    e.preventDefault()
-  }
-
-  handleFile (e) {
-    var reader = new FileReader()
-    var file = e.target.files[0]
-
-    reader.onload = (upload) => {
-      this.setState({
-        data_uri: upload.target.result,
-      })
-    }
-
-    reader.readAsDataURL(file)
+  onDropFunc (files) {
+    this.props.addEvidence(files, 'this.props.name')
   }
 
   render () {
-    console.log(this.state)
+    console.log(this.props)
+
+    const onDropFunc = (files) => {
+      this.props.addEvidence(files, 'this.props.name')
+    }
+
     return (
       <Grid className='home'>
         <Row>
-          <Col xs={12}>
-          <input type="file" accept="image/*" capture="camera" />
-            <Dropzone onDrop={this.onDrop}>
+          <Col xs={4}/>
+          <Col xs={4}>
+            <Dropzone onDrop={onDropFunc}>
               <div>Try dropping some files here, or click to select files to upload.</div>
             </Dropzone>
-            {this.state.data_uri
-              ? <img src={this.state.data_uri} />
-              : null}
+            {this.props.files.data ? <img src={this.props.files.data.preview} /> : ''}
           </Col>
+          <Col xs={4}/>
         </Row>
       </Grid>
     )
   }
 }
-//              <input type='file' onChange={this.handleFile} />
+
+const mapStateToProps = state => ({ ...state })
+
+const actions = {addEvidence}
+
+export default connect(mapStateToProps, actions)(Home)
