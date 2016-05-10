@@ -33,37 +33,3 @@ body {
 main {
   margin: 0 1em;
 }
-
-/********************  QUESTIONNAIRE ******************/
-
-.questionnaire {
-  background-color: #4CCEDE;
-  .slick-prev {
-    left: -45px;
-  }
-  .slick-prev:before, .slick-next:before {
-    color: #D5E739;
-    font-size: 40px;
-  }
-  .slick-initialized {
-    min-height: 85%;
-    padding: 20px 0;
-    .slick-slide {
-      padding: 20px;
-      .Qbubble {
-        border: 2px solid #D5E739;
-        border-radius: 50%;
-        width: 2em;
-        height: 2em;
-        margin: 0 auto 20px auto;
-        .Qnumber {
-          color: #D5E739;
-          font-weight: 700;
-          text-align: center;
-          margin-top: 7px;
-        }
-      }
-    }
-  }
-
-}
