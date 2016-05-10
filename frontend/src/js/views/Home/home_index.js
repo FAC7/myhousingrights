@@ -1,21 +1,21 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { addEvidence } from '../../actions/addEvidence.js'
+import { changeHomeless } from '../../actions/changeAnswers.js'
 var Dropzone = require('react-dropzone')
 
 
 class Home extends React.Component {
 
   onDropFunc (files) {
-    this.props.addEvidence(files, 'this.props.name')
+    this.props.changeHomeless('q1', 'evidence', files)
   }
 
   render () {
     console.log(this.props)
 
     const onDropFunc = (files) => {
-      this.props.addEvidence(files, 'this.props.name')
+      this.props.changeHomeless('q1', 'evidence', files[0])
     }
 
     return (
@@ -26,7 +26,7 @@ class Home extends React.Component {
             <Dropzone onDrop={onDropFunc}>
               <div>Try dropping some files here, or click to select files to upload.</div>
             </Dropzone>
-            {this.props.files.data ? <img src={this.props.files.data.preview} /> : ''}
+            
           </Col>
           <Col xs={4}/>
         </Row>
@@ -37,6 +37,6 @@ class Home extends React.Component {
 
 const mapStateToProps = state => ({ ...state })
 
-const actions = { addEvidence }
+const actions = { changeHomeless }
 
 export default connect(mapStateToProps, actions)(Home)

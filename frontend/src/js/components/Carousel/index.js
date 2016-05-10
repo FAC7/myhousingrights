@@ -6,56 +6,76 @@ import TextArea from '../Dropdown/index.js'
 
 const qObjects = [
   {
+    section: 'Homeless',
+    q: 'q1',
     name: 'I plan and use my time efficiently',
     factor: 'Time Management'
   },
   {
+    section: 'Homeless',
+    q: 'q2',
     name: 'I am successful in social situations',
     factor: 'Social Competence'
   },
   {
+    section: 'Homeless',
+    q: 'q3',
     name: 'When working on a project, I do my best to get the details right',
     factor: 'Achievement Motivation'
   },
   {
+    section: 'Homeless',
+    q: 'q4',
     name: 'I change my thinking or opinions easily if there is a better idea',
     factor: 'Intellectual Flexibility'
   },
   {
+    section: 'Location',
+    q: 'q1',
     name: 'I can get people to work for me',
     factor: 'Task Leadership'
   },
   {
+    section: 'Location',
+    q: 'q2',
     name: 'I can stay calm in stressful situations',
     factor: 'Emotional Control'
   },
   {
+    section: 'Location',
+    q: 'q3',
     name: 'I like to be busy and actively involved in things',
     factor: 'Active Initiative'
   },
   {
+    section: 'Location',
+    q: 'q4',
     name: 'I know I have the ability to do anything I want to do',
     factor: 'Self-Confidence'
   },
   {
+    section: 'Vulnerability',
+    q: 'q1',
     name: 'I do not waste time',
     factor: 'Time Management'
   },
   {
+    section: 'Vulnerability',
+    q: 'q2',
     name: 'I am competent in social situations',
     factor: 'Social Competence'
   },
   {
+    section: 'Vulnerability',
+    q: 'q3',
     name: 'I try to get the best results when I do things',
     factor: 'Achievement Motivation'
   },
   {
+    section: 'Vulnerability',
+    q: 'q4',
     name: 'I am open to new ideas',
     factor: 'Intellectual Flexibility'
-  },
-  {
-    name: 'I am a good leader when a task needs to be done',
-    factor: 'Task Leadership'
   }
 ]
 
@@ -99,7 +119,7 @@ export default class Questionnaire extends React.Component {
             transitionLeaveTimeout={800}
             transitionLeave
           >
-            {this.state.added ? <TextArea /> : null}
+            {this.state.added ? <TextArea {...question}/> : null}
           </ReactCSSTransitionReplace>
         </div>
       )

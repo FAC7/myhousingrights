@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
-import files from './reducer_addFile.js'
-import homeless from './reducer_homeless.js'
+import { homeless, locationData, vulnerability } from './reducer_changeAnswers.js'
 
 const rootReducer = combineReducers({
-  files,
-  homeless
+  homeless,
+  locationData,
+  vulnerability,
 })
 
 export default rootReducer
