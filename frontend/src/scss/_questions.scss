@@ -1,48 +1,18 @@
-@import 'variables';
-@import 'navbar';
-@import 'questions';
-
-html {
-  position: relative;
-  min-height: 100%;
+.btn-next {
+  margin-top: 2em;
 }
 
-body {
-  font-family: $main-font;
+.btn {
+  background-color: $primary-orange;
 }
-
-.about h3 {
-  text-align: center;
-  margin: 2em;
-}
-
-.home {
-  text-align: center;
-}
-
-.image-container {
-  width: 80%;
-  max-width: 400px;
-  margin: 4em auto;
-
-  img {
-    width: 100%;
-  }
-}
-
-main {
-  margin: 0 1em;
-}
-
-/********************  QUESTIONNAIRE ******************/
 
 .questionnaire {
-  background-color: #4CCEDE;
+  background-color: $primary-white;
   .slick-prev {
     left: -45px;
   }
   .slick-prev:before, .slick-next:before {
-    color: #D5E739;
+    color: $primary-orange;
     font-size: 40px;
   }
   .slick-initialized {
@@ -65,5 +35,4 @@ main {
       }
     }
   }
-
 }

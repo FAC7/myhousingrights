@@ -37,6 +37,6 @@ class Home extends React.Component {
 
 const mapStateToProps = state => ({ ...state })
 
-const actions = {addEvidence}
+const actions = { addEvidence }
 
 export default connect(mapStateToProps, actions)(Home)

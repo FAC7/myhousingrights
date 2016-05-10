@@ -1,6 +1,6 @@
 require('env2')('./config.env')
 const createServer = require('./server.js')
-const createClient = require('./redis/client.js')
+// const createClient = require('./redis/client.js')
 
 // with redis
 // const client = createClient()

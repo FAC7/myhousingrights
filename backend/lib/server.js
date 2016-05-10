@@ -12,9 +12,10 @@ const Inert = require('inert')
 const Images = require('./routes/Images.js')
 const ReactUrls = require('./routes/ReactUrls.js')
 const Scripts = require('./routes/Scripts.js')
+const Api = require('./routes/api/data/index.js')
 
 const Plugins = [ Inert ]
-const Routes = [ Images, ReactUrls, Scripts ]
+const Routes = [ Images, ReactUrls, Scripts ].concat(Api)
 
 module.exports = (client) => {
 

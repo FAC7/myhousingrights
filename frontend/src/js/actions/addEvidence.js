@@ -1,7 +1,7 @@
 import * as types from './actionTypes'
 
 export const changeHomeless = (toChange, question, data) => ({
-  type: types.ADD_FILE,
+  type: types.ADD_HOMELESS,
   toChange,
   question,
   data,

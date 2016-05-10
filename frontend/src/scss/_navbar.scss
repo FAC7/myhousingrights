@@ -1,0 +1,20 @@
+@import 'variables';
+
+.header-spacing {
+  height: $header-height;
+}
+
+nav,footer,.footer-copyright {
+  background-color: $primary-orange !important;
+}
+
+footer.page-footer {
+  padding-top: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+}
+
+footer > .container {
+  display: none;
+}

@@ -3,13 +3,17 @@ import { Route, IndexRoute } from 'react-router'
 
 import App from './components/App.js'
 import Home from './views/Home/home_index.js'
-import About from './views/About/about_index.js'
-import Contact from './views/Contact/contact_index.js'
+import Homeless from './views/Questions/Homeless/index.js'
+import Residence from './views/Questions/Residence/index.js'
+import Priority from './views/Questions/Priority/index.js'
+import Intention from './views/Questions/Intention/index.js'
 
 export default (
   <Route path='/' component={App}>
     <IndexRoute component={Home} />
-    <Route path='/about' component={About} />
-    <Route path='/contact' component={Contact} />
+    <Route path='homeless' component={Homeless} />
+    <Route path='priority' component={Priority} />
+    <Route path='residence' component={Residence} />
+    <Route path='intention' component={Intention} />
   </Route>
 )
