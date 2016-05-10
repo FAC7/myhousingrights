@@ -1,5 +1,7 @@
 # hackathon boilerplate
 
+[![Join the chat at https://gitter.im/FAC7/myhousingrights](https://badges.gitter.im/FAC7/myhousingrights.svg)](https://gitter.im/FAC7/myhousingrights?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Founders and Coders'](http://www.foundersandcoders.com/) current cohort are doing Hackathons all through April. This is some boilerplate code to get us off to a good start.
 
 It's a work in progress so feel free to contribute!
