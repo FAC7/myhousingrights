@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-materialize'
 import { browserHistory } from 'react-router'
+import Questions from '../../../components/Carousel/index.js'
 
 export default class Generic extends React.Component {
   onClick () {
@@ -14,7 +15,7 @@ export default class Generic extends React.Component {
         <p>{this.props.intro}</p>
         <h4>Please tell us a bit more:</h4>
         <div className='questions'>
-          This is where the carousel goes
+          <Questions />
         </div>
         <Button waves='light' className='btn-next' onClick={this.onClick}>
           Move on

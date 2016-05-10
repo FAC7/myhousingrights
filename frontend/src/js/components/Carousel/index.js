@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
-import {Row, Col, Button} from 'react-materialize'
+import { Row, Col, Button } from 'react-materialize'
 import ReactCSSTransitionReplace from 'react-css-transition-replace'
 import TextArea from '../Dropdown/index.js'
 
@@ -69,7 +69,7 @@ export default class Questionnaire extends React.Component {
   }
 
   handleClick () {
-    this.setState({added: !this.state.added})
+    this.setState({ added: !this.state.added })
   }
 
   render () {
@@ -97,9 +97,9 @@ export default class Questionnaire extends React.Component {
             transitionName='roll-up'
             transitionEnterTimeout={800}
             transitionLeaveTimeout={800}
-            transitionLeave={true}
+            transitionLeave
           >
-            {this.state.added ? (<TextArea />) : null}
+            {this.state.added ? <TextArea /> : null}
           </ReactCSSTransitionReplace>
         </div>
       )
@@ -110,9 +110,6 @@ export default class Questionnaire extends React.Component {
         <Row>
           <Col s={8} offset='s2'>
             <Slider {...settings}>
-              <div><h5>When completing the questionnaire, think about how you think and feel about yourself. </h5></div>
-              <div><h5>Be honest. There are no right or wrong answers and everyone will have different responses.</h5></div>
-              <div><h5>Answer the questions as you feel now, even if you have felt differently at some other time in your life.</h5></div>
               {questions}
               <div><Button> Submit Questionnaire</Button></div>
             </Slider>
