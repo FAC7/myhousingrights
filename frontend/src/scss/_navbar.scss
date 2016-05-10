@@ -4,10 +4,17 @@
   height: $header-height;
 }
 
-nav,footer {
+nav,footer,.footer-copyright {
   background-color: $primary-orange !important;
 }
 
-.footer-copyright {
-  background-color: $primary-orange !important;
+footer.page-footer {
+  padding-top: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
+}
+
+footer > .container {
+  display: none;
 }
