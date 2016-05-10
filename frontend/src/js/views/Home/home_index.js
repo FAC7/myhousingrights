@@ -1,7 +1,5 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
-import { connect } from 'react-redux'
-import { getUserDetails } from '../../actions/actions_index.js'
 
 export default class Home extends React.Component {
   render () {

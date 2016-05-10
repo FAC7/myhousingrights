@@ -3,11 +3,11 @@ const createServer = require('./server.js')
 const createClient = require('./redis/client.js')
 
 // with redis
-// const client = createClient()
-// const server = createServer(client)
+const client = createClient()
+const server = createServer(client)
 
 // without redis
-const server = createServer()
+// const server = createServer()
 
 server.start((err) => {
   if (err) {
