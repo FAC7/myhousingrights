@@ -104,7 +104,7 @@
     "no-process-exit": "error",
 
     "array-bracket-spacing": ["error", "always"],
-    "block-spacing": ["error", "never"],
+    "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-spacing": "error",
     "computed-property-spacing": "error",

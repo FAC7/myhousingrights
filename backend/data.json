@@ -1,0 +1,79 @@
+{
+  "users": {
+    "1": {
+      "username": "johnny"
+    }
+  },
+
+  "answers": {
+    "0": {
+      "homeless": [
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""},
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""}
+      ],
+      "priority": [
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""},
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""}
+      ],
+      "residence": [
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""},
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""}
+      ],
+      "intention": [
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""},
+        {"answer": 0, "notes": "", "evidence": ""},
+        {"answer": 1, "notes": "blah", "evidence": ""}
+      ]
+    }
+  },
+
+  "questions": {
+    "homeless": [
+      {
+        "text": "blah",
+        "answers": ["yes", "no"]
+      },
+      {
+        "text": "blah2",
+        "answers": ["yes", "no"]
+      }
+    ],
+    "priority": [
+      {
+        "text": "blah",
+        "answers": ["yes", "no"]
+      },
+      {
+        "text": "blah2",
+        "answers": ["yes", "no"]
+      }
+    ],
+    "residence": [
+      {
+        "text": "blah",
+        "answers": ["yes", "no"]
+      },
+      {
+        "text": "blah2",
+        "answers": ["yes", "no"]
+      }
+    ],
+    "intention": [
+      {
+        "text": "blah",
+        "answers": ["yes", "no"]
+      },
+      {
+        "text": "blah2",
+        "answers": ["yes", "no"]
+      }
+    ]
+  }
+}
