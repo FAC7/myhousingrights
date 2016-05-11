@@ -35,3 +35,4 @@ node_modules
 backend/dist
 dump.rdb
 config.env
+app.js

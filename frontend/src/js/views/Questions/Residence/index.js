@@ -3,6 +3,8 @@ import Generic from '../Generic/index.js'
 
 export default (props) => {
   return (
-    <Generic {...props}/>
+    <main>
+      <Generic {...props}/>
+    </main>
   )
 }

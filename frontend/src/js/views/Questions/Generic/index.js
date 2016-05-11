@@ -1,24 +1,25 @@
 import React from 'react'
 import { Button } from 'react-materialize'
 import { browserHistory } from 'react-router'
-import Questions from '../../../components/Carousel/index.js'
+import Carousel from '../../../components/Carousel/index.js'
 
 export default class Generic extends React.Component {
   onClick () {
-    setTimeout(() => { browserHistory.push('/priority') }, 400)
+    browserHistory.push('/priority')
   }
 
   render () {
     return (
-      <div>
-        <h3>{this.props.title}</h3>
+      <div className='questions-container'>
+        <h4>{this.props.title}</h4>
         <p>{this.props.intro}</p>
-        <h4>Please tell us a bit more:</h4>
-        <div className='questions'>
-          <Questions />
-        </div>
+        <strong>{this.props.link}</strong>
+        <Carousel qObjects={this.props.questions}/>
         <Button waves='light' className='btn-next' onClick={this.onClick}>
           Move on
+        </Button>
+        <Button waves='light' className='btn-next'>
+          Stuck? Call us!
         </Button>
       </div>
     )
