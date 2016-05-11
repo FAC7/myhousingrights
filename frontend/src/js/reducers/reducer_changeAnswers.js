@@ -64,23 +64,23 @@ export const locationData = (state = defaultLocationState, action) => {
 const defaultPriorityState = {
   'Question 1': {
     answer: 'yes',
-    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
-    notes: 'I slept rough on the street for several weeks finding alcoves or other sheltered areas.',
+    evidence: '',
+    notes: ''
   },
   'Question 2': {
-    answer: '',
+    answer: 'yes',
     evidence: '',
     notes: ''
   },
   'Question 3': {
-    answer: '',
-    evidence: '',
-    notes: '',
-  },
-  'Question 4': {
-    answer: '',
+    answer: 'yes',
     evidence: '',
     notes: ''
+  },
+  'Question 4': {
+    answer: 'yes',
+    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
+    notes: 'I have severe anxiety and depression.'
   }
 }
 
@@ -102,11 +102,16 @@ export const vulnerability = (state = defaultPriorityState, action) => {
 const defaultIntentionState = {
   'Question 1': {
     answer: 'yes',
-    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
-    notes: 'I slept rough on the street for several weeks finding alcoves or other sheltered areas.',
+    evidence: '',
+    notes: ''
   },
   'Question 2': {
-    answer: '',
+    answer: 'yes',
+    evidence: '',
+    notes: ''
+  },
+  'Question 3': {
+    answer: 'yes',
     evidence: '',
     notes: ''
   }
