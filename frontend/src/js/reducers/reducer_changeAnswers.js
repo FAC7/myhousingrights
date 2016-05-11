@@ -116,3 +116,18 @@ const defaultIntentionState = {
     notes: ''
   }
 }
+
+export const intention = (state = defaultIntentionState, action) => {
+  switch (action.type) {
+  case types.CHANGE_INTENTION:
+    return {
+      ...state,
+      [action.question]: {
+        ...state[action.question],
+        [action.toChange]: action.data
+      }
+    }
+  default:
+    return state
+  }
+}
