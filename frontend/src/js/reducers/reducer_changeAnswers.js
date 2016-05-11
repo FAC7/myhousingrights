@@ -3,12 +3,12 @@ import * as types from '../actions/actionTypes.js'
 const defaultHomelessState = {
   'Question 1': {
     answer: 'no',
-    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
+    evidence: '',
     notes: 'I slept rough on the street for several weeks finding alcoves or other sheltered areas.',
   },
   'Question 2': {
     answer: 'yes',
-    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
+    evidence: '',
     notes: ''
   },
   'Question 3': {
@@ -18,7 +18,7 @@ const defaultHomelessState = {
   },
   'Question 4': {
     answer: 'yes',
-    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
+    evidence: '',
     notes: 'I can bring it with me.'
   }
 }
@@ -113,7 +113,7 @@ const defaultIntentionState = {
   'Question 3': {
     answer: 'yes',
     evidence: '',
-    notes: ''
+    notes: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png'
   }
 }
 
