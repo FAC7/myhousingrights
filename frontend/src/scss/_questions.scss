@@ -6,6 +6,10 @@
   background-color: $primary-orange;
 }
 
+.btn-wrap {
+  text-align: center;
+}
+
 .questions-container {
   margin-bottom: 10em;
 }
@@ -53,4 +57,15 @@
       }
     }
   }
+}
+
+.input-box {
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: #EEE;
+  margin-top: 2em;
+  border-radius: 5px;
+  padding: 0.5em;
+  height: 5em;
 }

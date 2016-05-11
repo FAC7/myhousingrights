@@ -4,8 +4,13 @@ import { browserHistory } from 'react-router'
 import Carousel from '../../../components/Carousel/index.js'
 
 export default class Generic extends React.Component {
+  constructor () {
+    super()
+    this.onClick = this.onClick.bind(this)
+  }
+
   onClick () {
-    browserHistory.push('/priority')
+    browserHistory.push(this.props.next)
   }
 
   render () {
@@ -15,12 +20,15 @@ export default class Generic extends React.Component {
         <p>{this.props.intro}</p>
         <strong>{this.props.link}</strong>
         <Carousel qObjects={this.props.questions}/>
-        <Button waves='light' className='btn-next' onClick={this.onClick}>
-          Move on
-        </Button>
-        <Button waves='light' className='btn-next'>
-          Stuck? Call us!
-        </Button>
+        <div className='btn-wrap'>
+          <Button waves='light' className='btn-next' onClick={this.onClick}>
+            Move on
+          </Button>
+          <Button waves='light' className='btn-next'>
+            Stuck? Call us!
+          </Button>
+        </div>
+
       </div>
     )
   }
