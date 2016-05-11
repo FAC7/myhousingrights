@@ -9,7 +9,7 @@ class Dropdown extends React.Component {
     }
     console.log(this.props)
     return (
-      <textarea onChange={changeHandler} rows='4' cols='50' placeholder={this.props.placeholder} />
+      <textarea onChange={changeHandler} rows='4' cols='50' placeholder='tell us more!' />
     )
   }
 }
