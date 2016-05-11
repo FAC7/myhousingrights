@@ -59,7 +59,7 @@ export default class Questionnaire extends React.Component {
           <Col s={8} offset='s2'>
             <Slider {...settings}>
               {questions}
-              <div><Button onClick={() => }>Submit Questionnaire</Button></div>
+              <div><Button>Submit Questionnaire</Button></div>
             </Slider>
           </Col>
         </Row>
