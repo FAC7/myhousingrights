@@ -3,12 +3,10 @@ import { connect } from 'react-redux'
 
 class Question extends React.Component {
   render () {
-    const image = this.props.Evidence
     return (
       <div className='qDiv'>
-        <h4 className='qNumber'>{this.props.questionNumber}</h4>
-        <p className='qNotes'>{this.props.Notes}</p>
-        <img src={image} />
+        <h3 className='qNumber'>{this.props.questionNumber}</h3>
+        <p className='qNotes'>{'You answered...' + this.props.Notes}</p>
       </div>
     )
   }

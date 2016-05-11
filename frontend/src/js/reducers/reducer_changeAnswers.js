@@ -1,22 +1,22 @@
 import * as types from '../actions/actionTypes.js'
 
 const defaultState = {
-  q1: {
+  'Question 1': {
     answer: 'yes',
-    evidence: 'blob:http%3A//localhost%3A4000/aea02ba2-cf04-4632-9ddb-85e351a3b05d',
+    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png',
     notes: 'I slept rough on the street for several weeks finding alcoves or other sheltered areas.',
   },
-  q2: {
+  'Question 2': {
     answer: '',
     evidence: '',
     notes: ''
   },
-  q3: {
+  'Question 3': {
     answer: '',
     evidence: '',
     notes: '',
   },
-  q4: {
+  'Question 4': {
     answer: '',
     evidence: '',
     notes: ''

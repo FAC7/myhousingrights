@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import CaseSection from '../../components/Case/index.js'
+import { ControlledTabs, Tab } from 'react-bootstrap'
 
 class Case extends React.Component {
   render () {
     return (
-      <main className='case'>
+      <div>
         <CaseSection />
-      </main>
+      </div>
     )
   }
 }
