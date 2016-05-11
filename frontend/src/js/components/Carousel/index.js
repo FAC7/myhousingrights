@@ -14,10 +14,7 @@ export default class Questionnaire extends React.Component {
     }
   }
 
-  handleClick (answer, hasNotes) {
-    const aObj = hasNotes ? { answer } : { answer }
-
-    const answers = this.state.answers.concat([ aObj ])
+  handleClick () {
     this.setState({ added: !this.state.added })
   }
 
@@ -38,8 +35,8 @@ export default class Questionnaire extends React.Component {
             <div className='Qnumber'>{i + 1}</div>
           </div>
           <p>{question.text}</p>
-          <Button onClick={this.handleClick.bind(this, 1, question.notesOn)}>Yes</Button>
-          <Button onClick={this.handleClick.bind(this, 0, !question.notesOn)}>No</Button>
+          <Button>Yes</Button>
+          <Button onClick={this.handleClick.bind(this)}>No</Button>
           <ReactCSSTransitionReplace
             {...this.props}
             transitionName='roll-up'
@@ -47,7 +44,7 @@ export default class Questionnaire extends React.Component {
             transitionLeaveTimeout={800}
             transitionLeave
           >
-            {this.state.added ? <TextArea /> : null}
+            {this.state.added ? <TextArea {...question}/> : null}
           </ReactCSSTransitionReplace>
         </div>
       )

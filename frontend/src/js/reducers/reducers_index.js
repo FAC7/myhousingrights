@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import homeless from './reducer_homeless.js'
+import { homeless, locationData, vulnerability } from './reducer_changeAnswers.js'
 
 const rootReducer = combineReducers({
-  homeless
+  homeless,
+  locationData,
+  vulnerability,
 })
 
 export default rootReducer
