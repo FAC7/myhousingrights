@@ -5,8 +5,12 @@ class Question extends React.Component {
   render () {
     return (
       <div className='qDiv'>
-        <h5 className='qNumber'>{this.props.questionNumber}</h5>
-        <p className='qNotes'>{'You answered...' + this.props.Notes}</p>
+        <h3 className='qNumber'>{this.props.questionNumber}</h3>
+        <p className='qNotes'>{'You answered ' + this.props.Answer + '.'}</p>
+        {this.props.Notes ?
+        <p className='qNotes'>{'You said...' + this.props.Notes}</p>
+        : null
+        }
       </div>
     )
   }

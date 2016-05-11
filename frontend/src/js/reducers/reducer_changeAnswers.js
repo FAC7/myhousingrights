@@ -112,8 +112,8 @@ const defaultIntentionState = {
   },
   'Question 3': {
     answer: 'yes',
-    evidence: '',
-    notes: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png'
+    notes: '',
+    evidence: 'http://indy100.independent.co.uk/image/20912-m9o0ky.png'
   }
 }
 
