@@ -2,9 +2,9 @@ import * as types from '../actions/actionTypes.js'
 
 const defaultState = {
   q1: {
-    answer: '',
-    evidence: '',
-    notes: '',
+    answer: 'yes',
+    evidence: 'blob:http%3A//localhost%3A4000/aea02ba2-cf04-4632-9ddb-85e351a3b05d',
+    notes: 'I slept rough on the street for several weeks finding alcoves or other sheltered areas.',
   },
   q2: {
     answer: '',
