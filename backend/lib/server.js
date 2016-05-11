@@ -1,5 +1,5 @@
 require('env2')('./config.env')
-
+const port = process.env.PORT || 4000
 const Hapi = require('hapi')
 
 // helper methods
@@ -21,7 +21,7 @@ module.exports = (client) => {
 
   const server = new Hapi.Server()
 
-  server.connection({ port: process.env.PORT || 4000 })
+  server.connection({ port })
   server.register(Plugins, handlePlugins)
   server.route(Routes)
 
