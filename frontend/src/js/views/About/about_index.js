@@ -1,48 +1,22 @@
 import React from 'react'
-import Webcam from '../../../../../public/minifiedWebcam.js'
+import { browserHistory } from 'react-router'
+import { Button } from 'react-materialize'
 
 export default class App extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      screenshot: null,
-      sc2: null,
-      tab: 0
-    }
-    this.screenshot = this.screenshot.bind(this)
-    this.screenshot2 = this.screenshot2.bind(this)
-  }
-
-  screenshot () {
-    const screenshot = this.refs.webcam.getScreenshot()
-    this.setState({ screenshot: screenshot })
-  }
-
-  screenshot2 () {
-    const screenshot = this.refs.webcam.getScreenshot()
-    this.setState({ sc2: screenshot })
-  }
-
   render () {
-    console.log(this.state)
     return (
-      <div>
-        <h1>react-webcam</h1>
-        <Webcam
-          ref='webcam'
-        />
-        <div>
-          <h2>Screenshots</h2>
-          <div className='screenshots'>
-            <div className='controls'>
-              <button onClick={this.screenshot}>capture</button>
-              <button onClick={this.screenshot2}>capture</button>
-            </div>
-            {this.state.screenshot ? <img src={this.state.screenshot} /> : null}
-            {this.state.sc2 ? <img src={this.state.sc2} /> : null}
-          </div>
-        </div>
-      </div>
+      <main style={{ textAlign: 'center' }}>
+        <h3 style={{ marginBottom: '2em' }}>
+          Welcome to the fact-finding mission
+        </h3>
+        <h5 style={{ marginBottom: '2em' }}>
+          We’re going to ask you questions about your situation
+        </h5>
+        <h5 style={{ marginBottom: '2em' }}>
+          This is to prepare you to speak to your council about your homelessness
+        </h5>
+        <Button onClick={() => { browserHistory.push('/homeless') }}>Get started</Button>
+      </main>
     )
   }
 }
