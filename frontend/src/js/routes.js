@@ -8,6 +8,7 @@ import Homeless from './views/Questions/Homeless/index.js'
 import Residence from './views/Questions/Residence/index.js'
 import Priority from './views/Questions/Priority/index.js'
 import Intention from './views/Questions/Intention/index.js'
+import Case from './views/Case/case_index.js'
 
 export default (
   <Route path='/' component={App}>
@@ -16,6 +17,7 @@ export default (
     <Route path='priority' component={Priority} />
     <Route path='residence' component={Residence} />
     <Route path='intention' component={Intention} />
+    <Route path='case' component={Case} />
     <Route path='evidence' component={Home} />
   </Route>
 )
