@@ -21,16 +21,24 @@ class CaseSection extends React.Component {
         {questions}
         <h3 className='caseTitle'>Evidence</h3>
         {this.props[section]['Question 1'] ?
-          <img className='letter' src={this.props[section]['Question 1'].evidence} />
+          <a href={this.props[section]['Question 1'].evidence}>
+            <img className='letter' src={this.props[section]['Question 1'].evidence} />
+          </a>
           : null}
         {this.props[section]['Question 2'] ?
-          <img className='letter' src={this.props[section]['Question 2'].evidence} />
+          <a href={this.props[section]['Question 2'].evidence}>
+            <img className='letter' src={this.props[section]['Question 2'].evidence} />
+          </a>
           : null}
         {this.props[section]['Question 3'] ?
-          <img className='letter' src={this.props[section]['Question 3'].evidence} />
+          <a href={this.props[section]['Question 3'].evidence}>
+            <img className='letter' src={this.props[section]['Question 3'].evidence} />
+          </a>
           : null}
         {this.props[section]['Question 4'] ?
-          <img className='letter' src={this.props[section]['Question 4'].evidence} />
+          <a href={this.props[section]['Question 4'].evidence}>
+            <img className='letter' src={this.props[section]['Question 4'].evidence} />
+          </a>
           : null}
       </div>
     )
