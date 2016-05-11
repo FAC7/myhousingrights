@@ -4,21 +4,26 @@ export const changeHomeless = (question, toChange, data) => ({
   type: types.CHANGE_HOMELESS,
   question,
   toChange,
-  data,
+  data
 })
 
 export const changeLocation = (question, toChange, data) => ({
   type: types.CHANGE_LOCATION,
   question,
   toChange,
-  data,
+  data
 })
 
 export const changeVulnerability = (question, toChange, data) => ({
   type: types.CHANGE_VULNERABILITY,
   question,
   toChange,
-  data,
+  data
 })
 
-
+export const changeIntention = (question, toChange, data) => ({
+  type: types.CHANGE_INTENTION,
+  question,
+  toChange,
+  data
+})
