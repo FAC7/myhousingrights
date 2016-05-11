@@ -26,7 +26,6 @@ class Home extends React.Component {
             <Dropzone onDrop={onDropFunc}>
               <div>Try dropping some files here, or click to select files to upload.</div>
             </Dropzone>
-            
           </Col>
           <Col xs={4}/>
         </Row>

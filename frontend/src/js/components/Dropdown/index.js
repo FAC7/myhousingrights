@@ -9,7 +9,14 @@ class Dropdown extends React.Component {
       this.props[functionToCall](this.props.q, 'notes', e.target.value)
     }
     return (
-      <textarea onChange={changeHandler} rows='4' cols='50' placeholder={this.props.placeholder} />
+      <textarea
+        className='input-box'
+        onChange={changeHandler}
+        rows='8'
+        cols='50'
+        placeholder={this.props.placeholder}
+        value={this.props.notes}
+      />
     )
   }
 }
