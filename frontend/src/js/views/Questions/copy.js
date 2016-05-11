@@ -16,9 +16,10 @@ export const priority = {
   link: 'These questions will feel very personal (sorry!) but they are to get you thinking about your situation and whether you are particularly vulnerable and what proves that.',
   questions: [
     { q: 'q1', section: 'Vulnerability', text: 'You have told us that you are over seventeen years old. Is that true?', answer: 1, notes: null },
-    { q: 'q1', section: 'Vulnerability', text: 'You have told us that you have have never been in care or had an assessment with a social worker before. Is that true?', answer: 1, notes: null },
-    { q: 'q1', section: 'Vulnerability', text: 'You have told us that you are not pregnant or have dependent children - is that true?', answer: 1, notes: null },
-    { q: 'q1', section: 'Vulnerability', text: 'Do you have any physical health needs', answer: 1, notes: 'I have severe anxiety and depression.' }
+    { q: 'q2', section: 'Vulnerability', text: 'You have told us that you have have never been in care or had an assessment with a social worker before. Is that true?', answer: 1, notes: null },
+    { q: 'q3', section: 'Vulnerability', text: 'You have told us that you are not pregnant or have dependent children - is that true?', answer: 1, notes: null },
+    { q: 'q3', section: 'Vulnerability', text: 'Do you have any mental health needs', answer: 1, notes: 'I have severe anxiety and depression' },
+    { q: 'q4', section: 'Vulnerability', text: 'Do you have any physical health needs', answer: 0, notes: null }
   ]
 }
 
