@@ -1,21 +1,15 @@
+/* global $ */
 import React from 'react'
 import Slider from 'react-slick'
-import { Row, Col, Button } from 'react-materialize'
-import ReactCSSTransitionReplace from 'react-css-transition-replace'
-import { browserHistory } from 'react-router'
+import { Row, Col, Input } from 'react-materialize'
 import TextArea from '../Dropdown/index.js'
 
 export default class Questionnaire extends React.Component {
   constructor () {
     super()
     this.state = {
-      added: false,
-      answers: [],
+      added: false
     }
-  }
-
-  handleClick () {
-    this.setState({ added: !this.state.added })
   }
 
   render () {
@@ -28,6 +22,8 @@ export default class Questionnaire extends React.Component {
       draggable: true,
     }
 
+    console.log('rendering', this.state)
+
     const questions = this.props.qObjects.map((question, i) => {
       return (
         <div>
@@ -35,17 +31,23 @@ export default class Questionnaire extends React.Component {
             <div className='Qnumber'>{i + 1}</div>
           </div>
           <p>{question.text}</p>
-          <Button>Yes</Button>
-          <Button onClick={this.handleClick.bind(this)}>No</Button>
-          <ReactCSSTransitionReplace
-            {...this.props}
-            transitionName='roll-up'
-            transitionEnterTimeout={800}
-            transitionLeaveTimeout={800}
-            transitionLeave
-          >
-            {this.state.added ? <TextArea {...question}/> : null}
-          </ReactCSSTransitionReplace>
+          <div id='radio-answer'>
+            <Input
+              name={'answer' + i + 1}
+              type='radio'
+              value='yes'
+              label='Yes'
+              defaultChecked={question.answer === 1}
+            />
+            <Input
+              name={'answer' + i + 1}
+              type='radio'
+              value='no'
+              label='No'
+              defaultChecked={question.answer === 0}
+            />
+          </div>
+            {question.notes ? <TextArea {...question}/> : null}
         </div>
       )
     })
@@ -56,7 +58,6 @@ export default class Questionnaire extends React.Component {
           <Col s={8} offset='s2'>
             <Slider {...settings}>
               {questions}
-              <div><Button>Submit Questionnaire</Button></div>
             </Slider>
           </Col>
         </Row>
