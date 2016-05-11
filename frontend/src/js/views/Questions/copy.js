@@ -17,8 +17,8 @@ export const priority = {
   questions: [
     { q: 'q1', section: 'Vulnerability', text: 'You have told us that you are over seventeen years old. Is that true?', answer: 1, notes: null },
     { q: 'q1', section: 'Vulnerability', text: 'You have told us that you have have never been in care or had an assessment with a social worker before. Is that true?', answer: 1, notes: null },
-    { q: 'q1', section: 'Vulnerability', text: 'You have told us that you are not pregnant or have dependent children - is that true?', answer: 1, notes: 'I have severe anxiety and depression.' },
-    { q: 'q1', section: 'Vulnerability', text: 'Do you have any physical health needs', answer: 1, notes: null }
+    { q: 'q1', section: 'Vulnerability', text: 'You have told us that you are not pregnant or have dependent children - is that true?', answer: 1, notes: null },
+    { q: 'q1', section: 'Vulnerability', text: 'Do you have any physical health needs', answer: 1, notes: 'I have severe anxiety and depression.' }
   ]
 }
 
@@ -26,9 +26,9 @@ export const intention = {
   title: 'On purpose?',
   intro: 'The council will want to know about what steps you have taken to prevent your homelessness',
   questions: [
-    { q: 'q1', section: 'Vulnerability', text: 'Are you being evicted from you current accommodation?', answer: 1, notes: null },
-    { q: 'q1', section: 'Vulnerability', text: 'Have you received a court order saying you have to leave?', answer: 1, notes: null },
-    { q: 'q1', section: 'Vulnerability', text: 'Do you have anything that can prove the steps you have taken to not be homeless?', answer: 1, notes: null },
+    { q: 'q1', section: 'Intention', text: 'Are you being evicted from you current accommodation?', answer: 1, notes: null },
+    { q: 'q1', section: 'Intention', text: 'Have you received a court order saying you have to leave?', answer: 1, notes: null },
+    { q: 'q1', section: 'Intention', text: 'Do you have anything that can prove the steps you have taken to not be homeless?', answer: 1, notes: null }
   ]
 }
 
@@ -37,6 +37,6 @@ export const residence = {
   intro: 'Your local council will only have a duty to house you if it think you have a \'local connection\' to the area - this means you have lived there for a long time, or maybe have a lot of friends or family in the area',
   link: '',
   questions: [
-    { q: 'q1', section: 'Location', text: 'Do you have anything that can prove that you have a connection to your local area?', answer: 1, notes: 'I slept rough on the street for several weeks finding alcoves or other sheltered areas.' }
+    { q: 'q1', section: 'Location', text: 'Do you have anything that can prove that you have a connection to your local area?', answer: 1, notes: 'I can bring my proof of address with me.' }
   ]
 }
