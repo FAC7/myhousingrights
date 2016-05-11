@@ -67,5 +67,7 @@
   margin-top: 2em;
   border-radius: 5px;
   padding: 0.5em;
-  height: 5em;
+  min-height: 5em;
+  max-height: 6em;
+  overflow: scroll;
 }

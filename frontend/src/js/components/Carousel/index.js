@@ -37,21 +37,21 @@ export default class Questionnaire extends React.Component {
               type='radio'
               value='yes'
               label='Yes'
-              defaultChecked={question.answer === 1}
+              defaultChecked={!!question.answer}
             />
             <Input
               name={'answer' + i + 1}
               type='radio'
               value='no'
               label='No'
-              defaultChecked={question.answer === 0}
+              defaultChecked={!question.answer}
             />
           </div>
             {question.notes ? <TextArea {...question}/> : null}
         </div>
       )
     })
-
+    console.log(this.props.qObjects[0].answer === 0)
     return (
       <div className='questionnaire'>
         <Row>
