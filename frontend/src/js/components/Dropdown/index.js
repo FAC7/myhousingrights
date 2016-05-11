@@ -1,26 +1,20 @@
 import React from 'react'
-import { addHomeless } from '../../actions/addHomeless.js'
+import * as importedActions from '../../actions/changeAnswers.js'
 import { connect } from 'react-redux'
 
 class Dropdown extends React.Component {
   render () {
-    const changeHandler = (event) => {
-      this.props.dispatcher(event.target.value, 'changed notes', 1)
+    const changeHandler = (e) => {
+      const functionToCall = 'change' + this.props.section
+      this.props[functionToCall](this.props.q, 'notes', e.target.value)
     }
-    console.log(this.props)
     return (
       <textarea onChange={changeHandler} rows='4' cols='50' placeholder='tell us more!' />
     )
   }
 }
 
-const mapStateToProps = state => ({...state})
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatcher: (data, changed, index) => {
-      dispatch(addHomeless(data, changed, index))
-    }
-  }
-}
+const mapStateToProps = state => ({ ...state })
+const actions = { ...importedActions }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dropdown)
+export default connect(mapStateToProps, actions)(Dropdown)
