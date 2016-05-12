@@ -14,7 +14,7 @@ class CaseSection extends React.Component {
         />
       )
     })
-    console.log('cases', this.props)
+
     return (
       <div>
         <h2 className='caseTitle'>{this.props.title}</h2>

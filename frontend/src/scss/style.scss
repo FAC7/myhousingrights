@@ -12,6 +12,11 @@ body {
   font-family: $main-font;
 }
 
+html,body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .about h3 {
   text-align: center;
   margin: 2em;

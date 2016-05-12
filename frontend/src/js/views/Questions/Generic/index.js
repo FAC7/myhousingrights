@@ -1,18 +1,9 @@
 import React from 'react'
 import { Button } from 'react-materialize'
-import { browserHistory } from 'react-router'
+import { Link } from 'react-router'
 import Carousel from '../../../components/Carousel/index.js'
 
 export default class Generic extends React.Component {
-  constructor () {
-    super()
-    this.onClick = this.onClick.bind(this)
-  }
-
-  onClick () {
-    browserHistory.push(this.props.next)
-  }
-
   render () {
     return (
       <div className='questions-container'>
@@ -21,12 +12,16 @@ export default class Generic extends React.Component {
         <strong>{this.props.link}</strong>
         <Carousel qObjects={this.props.questions}/>
         <div className='btn-wrap'>
-          <Button waves='light' className='btn-next' onClick={this.onClick}>
-            Move on
-          </Button>
-          <Button waves='light' className='btn-next'>
-            Stuck? Call us!
-          </Button>
+          <Link to={this.props.next}>
+            <Button waves='light' className='btn-next'>
+              Move on
+            </Button>
+          </Link>
+          <a href='tel://00441632960889'>
+            <Button waves='light' className='btn-next'>
+              Stuck? Call us!
+            </Button>
+          </a>
         </div>
 
       </div>
