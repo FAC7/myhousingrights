@@ -12,6 +12,10 @@ export default class Questionnaire extends React.Component {
     }
   }
 
+  componentDidMount () {
+    console.log($('input[name=answer1]:checked'))
+  }
+
   render () {
     var settings = {
       dots: true,
@@ -20,27 +24,27 @@ export default class Questionnaire extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       draggable: true,
+      adaptiveHeight: true,
     }
 
-    console.log('rendering', this.state)
-
     const questions = this.props.qObjects.map((question, i) => {
+      const qnum = i + 1
       return (
-        <div>
+        <div key={i}>
           <div className='Qbubble'>
-            <div className='Qnumber'>{i + 1}</div>
+            <div className='Qnumber'>{qnum}</div>
           </div>
           <p>{question.text}</p>
           <div id='radio-answer'>
             <Input
-              name={'answer' + i + 1}
+              name={'answer' + qnum}
               type='radio'
               value='yes'
               label='Yes'
               defaultChecked={!!question.answer}
             />
             <Input
-              name={'answer' + i + 1}
+              name={'answer' + qnum}
               type='radio'
               value='no'
               label='No'
@@ -51,7 +55,7 @@ export default class Questionnaire extends React.Component {
         </div>
       )
     })
-    console.log(this.props.qObjects[0].answer === 0)
+
     return (
       <div className='questionnaire'>
         <Row>
